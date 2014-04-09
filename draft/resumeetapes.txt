@@ -1,0 +1,72 @@
+Résumé des étapes 
+1. Délimitation
+2. Persepective
+3. Flip horizontal
+4. Crop
+
+Let's create a script with pipe if possible
+
+273,24
+759,24
+1045,631
+14,652
+
+convert model.jpg \
+          -draw 'fill none stroke red polygon 273,24 759,24, 1045,631, 14,652' \
+          model_before.jpg
+
+
+
+273,24
+759,24
+771,658
+273,658
+
+convert model.jpg \
+          -draw 'fill none stroke blue polygon 273,24 759,24, 771,658, 273,658' \
+          model_after.jpg
+
+
+convert model.jpg -matte -virtual-pixel transparent -distort Perspective '273,24 273,24   759,24 759,24   1045,631 771,658   14,652 273,658' model_persp.png
+
+
+/*
+* Second example
+*/
+
+324,127
+775,134
+994,686
+57,675
+
+convert newmodel.jpg \
+          -draw 'fill none stroke red polygon 324,127 775,134, 994,686, 57,675' \
+          newmodel_before.jpg
+
+
+324,127
+775,134
+775,687
+324,681
+
+convert newmodel.jpg \
+          -draw 'fill none stroke green polygon 324,127 775,134, 775,687, 324,681' \
+          newmodel_after.jpg
+
+
+convert newmodel.jpg -matte -virtual-pixel transparent -distort Perspective '324,127 324,127   775,134 775,134   994,686 775,687   57,675 324,681' newmodel_persp.png
+
+convert newmodel_persp.png -flip new_model_flip.png
+
+
+326,41 
+443x538
+convert new_model_flip.png -crop 443x538+326+41  new_model_crop.png
+
+
+
+/*
+* The script 
+*/
+
+convert newmodel.jpg -matte -virtual-pixel transparent -distort Perspective '324,127 324,127   775,134 775,134   994,686 775,687   57,675 324,681' | convert -flip | convert -crop 443x538+326+41  new_model_crop.png
