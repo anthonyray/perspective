@@ -50,7 +50,7 @@ Grid.prototype.process = function(){ // Fill the data array of the grid with the
 	for (var X = 0 ; X < this.gridWidth ; X++){
 		for (var Y = 0 ; Y < this.gridHeight ; Y++){
 			color = this.getMeanCellColor(X,Y);
-			color.green = 255 - color.green;
+			color.distance = Math.sqrt( (color.red - referenceColor.red)*(color.red - referenceColor.red) + (color.green - referenceColor.green)*(color.green - referenceColor.green) + (color.blue - referenceColor.blue)*(color.blue - referenceColor.blue) );
 			color.X = X*this.cellWidth; 
 			color.Y = Y*this.cellHeight; 
 			this.data.push(color);
@@ -59,14 +59,27 @@ Grid.prototype.process = function(){ // Fill the data array of the grid with the
 }
 
 Grid.prototype.getFourPoints = function(){ // Get the points corresponding to the corner of the sheet
-	this.data.sort(function(a,b){
-		if (a.red > b.red)
-		      return 1;
-		    if (a.red < b.red)
-		      return -1;
-		    // a must be equal to b
-		    return 0;
-	});
+	var self = this;
+	var quadrant1 = this.data.filter(function(element){ // Superior quadrant
+		return (element.X <= (self.width / 2)) && (element.Y <= (self.height / 2 )) ;
+	}).sort(function(a,b) { return parseInt(a.distance,10) - parseInt(b.distance,10) });
+
+	var quadrant2 = this.data.filter(function(element){
+		return (element.X >= (self.width / 2)) && (element.Y <= (self.height / 2 )) ;
+	}).sort(function(a,b) { return parseInt(a.distance,10) - parseInt(b.distance,10) });
+
+	var quadrant3 = this.data.filter(function(element){
+		return (element.X <= (self.width / 2)) && (element.Y >= (self.height / 2 )) ;
+	}).sort(function(a,b) { return parseInt(a.distance,10) - parseInt(b.distance,10) });
+
+	var quadrant4 = this.data.filter(function(element){
+		return (element.X >= (self.width / 2)) && (element.Y >= (self.height / 2 )) ;
+	}).sort(function(a,b) { return parseInt(a.distance,10) - parseInt(b.distance,10) });
+
+	return [quadrant1[0],quadrant2[0],quadrant3[0],quadrant4[0]];
+
+	/*this.data.sort(function(a,b) { return parseInt(a.distance,10) - parseInt(b.distance,10) });
+	return [this.data[0],this.data[1],this.data[2],this.data[3]];*/
 }
 
 Grid.prototype.fillCell = function(X,Y,r,g,b){ // Fills a whole cell with the same color

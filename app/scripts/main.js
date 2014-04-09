@@ -16,6 +16,7 @@ var resultCanvas = document.getElementById('resultCanvas');
 var ctx = canvas.getContext('2d');
 var resultCtx = resultCanvas.getContext('2d');
 var grid = null;
+var referenceColor = { red : 197 , green : 229 , blue : 111};
 /*
 * Function that will be executed 
 */
@@ -34,16 +35,36 @@ function tick(){
 		/*
 		* Image processing
 		*/
-		console.log("Image processsing ...");
 		grid = new Grid(imageData,40,40);
 		grid.process();
-		console.log("Grid data :",grid.data[0]);
-		//JSManipulate.pixelate.filter(imageData,20);
+		grid.fillGridMeanCellColor();
+		var points = grid.getFourPoints();
 
 		/*
 		* Draw the result on the visible Canvas
 		*/
+
+		//$("#info").text( "Distance : " + Math.floor(grid.data[0].distance) + ", R : " + Math.floor(grid.data[0].red) + " , G : " + Math.floor(grid.data[0].green) + ", B : " + Math.floor(grid.data[0].blue) );
+		$("#info").html( "X : "+ points[0].X + " Y: " + points[0].Y + " dist : " + points[0].distance + "<br>" +
+		 "X : "+ points[1].X + " Y: " + points[1].Y + " dist : " + points[1].distance + "<br>" +
+		 "X : "+ points[2].X + " Y: " + points[2].Y + " dist : " + points[2].distance + "<br>" +
+		 "X : "+ points[3].X + " Y: " + points[3].Y + " dist : " + points[3].distance + "<br>");
+		grid.fillCell(points[0].X,points[0].Y,255,0,0);
+		grid.fillCell(points[1].X,points[1].Y,255,0,0);
+		grid.fillCell(points[2].X,points[2].Y,255,0,0);
+		grid.fillCell(points[3].X,points[3].Y,255,0,0);
+
+
 		resultCtx.putImageData(imageData,0,0);
+		resultCtx.strokeStyle = "green";
+		resultCtx.lineWidth = 5;
+		resultCtx.beginPath();
+		resultCtx.moveTo(points[0].X , points[0].Y );
+		resultCtx.lineTo(points[1].X , points[1].Y );
+		resultCtx.lineTo(points[3].X , points[3].Y );
+		resultCtx.lineTo(points[2].X , points[2].Y );
+		resultCtx.closePath();
+		resultCtx.stroke();
 	}
 }
 
