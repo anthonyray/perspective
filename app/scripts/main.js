@@ -23,6 +23,7 @@ var resultCanvas = document.getElementById('resultCanvas');
 var ctx = canvas.getContext('2d');
 var resultCtx = resultCanvas.getContext('2d');
 var grid = null;
+var controlPoints;
 
 /*
 * Binding DOM Events with functions
@@ -33,6 +34,22 @@ $("#detect").click(function(){
 
 $("#stopdetect").click(stopDetectingShape);
 
+$("#snapshot").click(function () {
+  if(controlPoints){
+    console.log("Ready to send the data");
+    var image = snapshot(canvas);
+    var data = {points : controlPoints, image : image};
+    console.log(data);
+    $.ajax({
+      type: "POST",
+      url: "/api/snap",
+      data: data
+})
+  }
+
+  else
+    console.log("Not ready to send the data");
+});
 /*
 * Function that will be executed
 */
@@ -55,7 +72,7 @@ function tick(){
 
       grid = new Grid(imageData,20,20);
       grid.process();
-      var points = grid.getFourPoints(); // Get the points
+      controlPoints = grid.getFourPoints(); // Get the points
 
       /*
       * Draw the result on the visible Canvas
@@ -67,7 +84,7 @@ function tick(){
       divideCanvas(resultCtx);
 
       // Draw the shape of the detected paper
-      drawShape(resultCtx,points);
+      drawShape(resultCtx,controlPoints);
     }
   }
 
@@ -111,6 +128,10 @@ function stopDetectingShape(){
 
 function detectShape() {
   requestAnimationFrame(tick);
+}
+
+function snapshot(canvas) {
+  return canvas.toDataURL('image/png');
 }
 
 if (navigator.getUserMedia) { // Make sure the browser has a getUserMedia capability
