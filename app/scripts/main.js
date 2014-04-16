@@ -113,8 +113,8 @@ function drawShape(context,points){
   context.beginPath();
   context.moveTo(points[0].X , points[0].Y );
   context.lineTo(points[1].X , points[1].Y );
-  context.lineTo(points[3].X , points[3].Y );
   context.lineTo(points[2].X , points[2].Y );
+  context.lineTo(points[3].X , points[3].Y );
   context.closePath();
   context.stroke();
 }

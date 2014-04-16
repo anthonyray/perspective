@@ -1,0 +1,211 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-bootstrap' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'generator-bootstrap', null ]
+5 verbose cache add name=undefined spec="generator-bootstrap" args=["generator-bootstrap",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'generator-bootstrap',
+6 verbose parsed url   path: 'generator-bootstrap',
+6 verbose parsed url   href: 'generator-bootstrap' }
+7 silly lockFile e568a2d9-generator-bootstrap generator-bootstrap
+8 verbose lock generator-bootstrap /Users/anthonyreinette/.npm/e568a2d9-generator-bootstrap.lock
+9 silly lockFile e568a2d9-generator-bootstrap generator-bootstrap
+10 silly lockFile e568a2d9-generator-bootstrap generator-bootstrap
+11 verbose addNamed [ 'generator-bootstrap', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile efcd95bb-generator-bootstrap generator-bootstrap@
+14 verbose lock generator-bootstrap@ /Users/anthonyreinette/.npm/efcd95bb-generator-bootstrap.lock
+15 silly addNameRange { name: 'generator-bootstrap', range: '*', hasData: false }
+16 verbose url raw generator-bootstrap
+17 verbose url resolving [ 'https://registry.npmjs.org/', './generator-bootstrap' ]
+18 verbose url resolved https://registry.npmjs.org/generator-bootstrap
+19 info trying registry request attempt 1 at 00:49:48
+20 http GET https://registry.npmjs.org/generator-bootstrap
+21 http 200 https://registry.npmjs.org/generator-bootstrap
+22 silly registry.get cb [ 200,
+22 silly registry.get   { date: 'Fri, 11 Apr 2014 22:49:49 GMT',
+22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+22 silly registry.get     etag: '"6SYJM8POJ3XXNMB0FELDDKZP9"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     'cache-control': 'max-age=1',
+22 silly registry.get     'content-length': '12447',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     age: '1098',
+22 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-am76-AMS',
+22 silly registry.get     'x-cache': 'MISS, MISS',
+22 silly registry.get     'x-cache-hits': '0, 0',
+22 silly registry.get     'x-timer': 'S1397255491.308767319,VS0,VS43,VE95,VE1097742',
+22 silly registry.get     vary: 'Accept',
+22 silly registry.get     'keep-alive': 'timeout=10, max=50',
+22 silly registry.get     connection: 'Keep-Alive' } ]
+23 silly addNameRange number 2 { name: 'generator-bootstrap', range: '*', hasData: true }
+24 silly addNameRange versions [ 'generator-bootstrap',
+24 silly addNameRange   [ '0.1.0-beta.1',
+24 silly addNameRange     '0.1.0',
+24 silly addNameRange     '0.1.1',
+24 silly addNameRange     '0.1.2',
+24 silly addNameRange     '0.1.3',
+24 silly addNameRange     '0.1.4',
+24 silly addNameRange     '0.1.5',
+24 silly addNameRange     '0.1.6' ] ]
+25 verbose addNamed [ 'generator-bootstrap', '0.1.6' ]
+26 verbose addNamed [ '0.1.6', '0.1.6' ]
+27 silly lockFile c09d0b8e-generator-bootstrap-0-1-6 generator-bootstrap@0.1.6
+28 verbose lock generator-bootstrap@0.1.6 /Users/anthonyreinette/.npm/c09d0b8e-generator-bootstrap-0-1-6.lock
+29 silly lockFile 8d7bf37f-ap-generator-bootstrap-0-1-6-tgz https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz
+30 verbose lock https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz /Users/anthonyreinette/.npm/8d7bf37f-ap-generator-bootstrap-0-1-6-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz',
+31 verbose addRemoteTarball   'caf4860702bcd6fa8b42375f471eda62b1e410c1' ]
+32 info retry fetch attempt 1 at 00:49:49
+33 verbose fetch to= /var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz
+34 http GET https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz
+35 http 200 https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz
+36 verbose tar unpack /var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz
+37 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+38 verbose lock tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package /Users/anthonyreinette/.npm/3cdd24a7-9114-0-03973761782981455-package.lock
+39 silly lockFile e6a85a0b-9114-0-03973761782981455-tmp-tgz tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz
+40 verbose lock tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz /Users/anthonyreinette/.npm/e6a85a0b-9114-0-03973761782981455-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm extractEntry .npmignore
+44 silly gunzTarPerm extractEntry .editorconfig
+45 silly gunzTarPerm extractEntry .gitattributes
+46 silly gunzTarPerm extractEntry .jshintrc
+47 silly gunzTarPerm extractEntry .travis.yml
+48 silly gunzTarPerm extractEntry app/index.js
+49 silly gunzTarPerm extractEntry app/USAGE
+50 silly gunzTarPerm extractEntry contributing.md
+51 silly gunzTarPerm extractEntry readme.md
+52 silly gunzTarPerm extractEntry test/test.js
+53 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+54 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+55 silly lockFile e6a85a0b-9114-0-03973761782981455-tmp-tgz tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz
+56 silly lockFile e6a85a0b-9114-0-03973761782981455-tmp-tgz tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/tmp.tgz
+57 verbose tar pack [ '/Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz',
+57 verbose tar pack   '/var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package' ]
+58 verbose tarball /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+59 verbose folder /var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+60 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+61 verbose lock tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package /Users/anthonyreinette/.npm/3cdd24a7-9114-0-03973761782981455-package.lock
+62 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+63 verbose lock tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz /Users/anthonyreinette/.npm/71b94737-ator-bootstrap-0-1-6-package-tgz.lock
+64 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+65 silly lockFile 3cdd24a7-9114-0-03973761782981455-package tar:///var/folders/yh/h8fvd0ns159d3txcjfy29j440000gn/T/npm-1558-9glPGff9/1397256589114-0.03973761782981455/package
+66 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+67 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+68 silly lockFile 31946224-enerator-bootstrap-0-1-6-package /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+69 verbose lock /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package /Users/anthonyreinette/.npm/31946224-enerator-bootstrap-0-1-6-package.lock
+70 silly lockFile 31946224-enerator-bootstrap-0-1-6-package /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+71 silly lockFile 31946224-enerator-bootstrap-0-1-6-package /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+72 verbose tar unpack /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+73 silly lockFile 940c904d-enerator-bootstrap-0-1-6-package tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+74 verbose lock tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package /Users/anthonyreinette/.npm/940c904d-enerator-bootstrap-0-1-6-package.lock
+75 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+76 verbose lock tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz /Users/anthonyreinette/.npm/71b94737-ator-bootstrap-0-1-6-package-tgz.lock
+77 silly gunzTarPerm modes [ '755', '644' ]
+78 silly gunzTarPerm extractEntry package.json
+79 silly gunzTarPerm extractEntry .npmignore
+80 silly gunzTarPerm extractEntry .editorconfig
+81 silly gunzTarPerm extractEntry .gitattributes
+82 silly gunzTarPerm extractEntry .jshintrc
+83 silly gunzTarPerm extractEntry .travis.yml
+84 silly gunzTarPerm extractEntry app/index.js
+85 silly gunzTarPerm extractEntry app/USAGE
+86 silly gunzTarPerm extractEntry contributing.md
+87 silly gunzTarPerm extractEntry readme.md
+88 silly gunzTarPerm extractEntry test/test.js
+89 silly lockFile 940c904d-enerator-bootstrap-0-1-6-package tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+90 silly lockFile 940c904d-enerator-bootstrap-0-1-6-package tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package
+91 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+92 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+93 verbose chmod /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz 644
+94 verbose chown /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz [ 501, 20 ]
+95 silly lockFile 8d7bf37f-ap-generator-bootstrap-0-1-6-tgz https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz
+96 silly lockFile 8d7bf37f-ap-generator-bootstrap-0-1-6-tgz https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz
+97 silly lockFile c09d0b8e-generator-bootstrap-0-1-6 generator-bootstrap@0.1.6
+98 silly lockFile c09d0b8e-generator-bootstrap-0-1-6 generator-bootstrap@0.1.6
+99 silly lockFile efcd95bb-generator-bootstrap generator-bootstrap@
+100 silly lockFile efcd95bb-generator-bootstrap generator-bootstrap@
+101 silly resolved [ { name: 'generator-bootstrap',
+101 silly resolved     version: '0.1.6',
+101 silly resolved     description: 'Yeoman generator for Bootstrap',
+101 silly resolved     keywords:
+101 silly resolved      [ 'yeoman-generator',
+101 silly resolved        'framework',
+101 silly resolved        'component',
+101 silly resolved        'bootstrap',
+101 silly resolved        'ui',
+101 silly resolved        'css',
+101 silly resolved        'sass',
+101 silly resolved        'less' ],
+101 silly resolved     author: { name: 'The Yeoman Team' },
+101 silly resolved     main: 'app/index.js',
+101 silly resolved     repository:
+101 silly resolved      { type: 'git',
+101 silly resolved        url: 'git://github.com/yeoman/generator-bootstrap.git' },
+101 silly resolved     scripts: { test: 'mocha' },
+101 silly resolved     dependencies: { 'yeoman-generator': '~0.16.0' },
+101 silly resolved     devDependencies: { mocha: '*' },
+101 silly resolved     peerDependencies: { yo: '>=1.0.0' },
+101 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+101 silly resolved     licenses: [ [Object] ],
+101 silly resolved     readme: '# Bootstrap generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-bootstrap.png?branch=master)](http://travis-ci.org/yeoman/generator-bootstrap)\n\nSimply lets you choose which flavor of [Bootstrap](http://getbootstrap.com) you would like to add to a project: CSS, SASS, LESS or Stylus. When you select an option, we\'ll pull down the relevant package from [Bower](http://bower.io) for you. \n\nMaintainer: [Brian Ford](https://github.com/btford)\n\n## Preview\n\n```shell\n$ yo bootstrap\n[?] In what format would you like the Bootstrap stylesheets? (Use arrow keys)\n❯ css\n  sass\n  less\n  stylus \n```\n\n## Getting Started\n\nInstall: `npm install -g generator-bootstrap`\n\nUsage: `yo bootstrap`\n\nAvailable generators:\n\n- bootstrap:app\n\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+101 silly resolved     readmeFilename: 'readme.md',
+101 silly resolved     bugs: { url: 'https://github.com/yeoman/generator-bootstrap/issues' },
+101 silly resolved     homepage: 'https://github.com/yeoman/generator-bootstrap',
+101 silly resolved     _id: 'generator-bootstrap@0.1.6',
+101 silly resolved     dist: { shasum: '014a7ac2a3636d15647fbcba9aa58197e81b01a7' },
+101 silly resolved     _from: 'generator-bootstrap@',
+101 silly resolved     _resolved: 'https://registry.npmjs.org/generator-bootstrap/-/generator-bootstrap-0.1.6.tgz' } ]
+102 info install generator-bootstrap@0.1.6 into /usr/local/lib
+103 info installOne generator-bootstrap@0.1.6
+104 info /usr/local/lib/node_modules/generator-bootstrap unbuild
+105 verbose tar unpack /Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+106 silly lockFile c25485b4-node-modules-generator-bootstrap tar:///usr/local/lib/node_modules/generator-bootstrap
+107 verbose lock tar:///usr/local/lib/node_modules/generator-bootstrap /Users/anthonyreinette/.npm/c25485b4-node-modules-generator-bootstrap.lock
+108 silly lockFile 71b94737-ator-bootstrap-0-1-6-package-tgz tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz
+109 verbose lock tar:///Users/anthonyreinette/.npm/generator-bootstrap/0.1.6/package.tgz /Users/anthonyreinette/.npm/71b94737-ator-bootstrap-0-1-6-package-tgz.lock
+110 silly gunzTarPerm modes [ '755', '644' ]
+111 error Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap'
+111 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap']
+111 error   errno: 3,
+111 error   code: 'EACCES',
+111 error   path: '/usr/local/lib/node_modules/generator-bootstrap',
+111 error   fstream_type: 'Directory',
+111 error   fstream_path: '/usr/local/lib/node_modules/generator-bootstrap',
+111 error   fstream_class: 'DirWriter',
+111 error   fstream_stack:
+111 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+111 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+111 error      'Object.oncomplete (fs.js:107:15)' ] }
+112 error Please try running this command again as root/Administrator.
+113 error System Darwin 13.1.0
+114 error command "node" "/usr/local/bin/npm" "install" "-g" "generator-bootstrap"
+115 error cwd /Users/anthonyreinette/Documents/Projects/api
+116 error node -v v0.10.26
+117 error npm -v 1.4.3
+118 error path /usr/local/lib/node_modules/generator-bootstrap
+119 error fstream_path /usr/local/lib/node_modules/generator-bootstrap
+120 error fstream_type Directory
+121 error fstream_class DirWriter
+122 error code EACCES
+123 error errno 3
+124 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap'
+125 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+125 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+125 error fstream_stack Object.oncomplete (fs.js:107:15)
+126 verbose exit [ 3, true ]
