@@ -9,24 +9,22 @@ router.get('/', function(req, res) {
 });
 
 router.post('/api/snap',function(req,res){
-  if (req.body.image){
-
+  if (req.body.image && req.body.points ){
     var rawdata = req.body.image.substr(22);
     var buf = new Buffer(rawdata, 'base64');
-    var imgproc = new imgprocessor();
+    var imgproc = new imgprocessor(req.body.points,'tmp/image.png','tmp/newimage.png');
+
     fs.writeFile('tmp/image.png', buf,function(err){
       if(err) {
         res.send('not ok');
       }
       else {
-        imgproc.fakeprocess(function(error, stdout, stderr){
+        imgproc.process(function(error, stdout, stderr){
           console.log(stdout);
           res.send('ok');
         });
-        console.log("Moving on");
       }
     });
-
   }
   else
   {

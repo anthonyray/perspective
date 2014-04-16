@@ -5,16 +5,26 @@ module.exports = function(points,imgsrc,imgdest){
   this.points = points;
   this.imgsrc = imgsrc;
   this.imgdest = imgdest;
+  this.generateScript();
 }
 
 module.exports.prototype.generateScript = function () {
+
+  var width = this.points[1].X - this.points[0].X;
+  var height = this.points[2].Y - this.points[1].Y;
+
   this.script = "convert " + this.imgsrc + " -matte -virtual-pixel transparent -distort Perspective '"
-  + 324 + "," + 127 + " "+324+","+127+"   "+775+","+134+" "+775+","+134+"   "+994+","+686+" "+775+","+687+"   "+57+","+675+" "+324+","+681+
-  "' - | convert - -flip - | convert - -crop 443x538+326+41  " + this.imgdest ;
+  + this.points[0].X + "," + this.points[0].Y + " " + this.points[0].X + "," + this.points[0].Y +"   "
+  + this.points[1].X + "," + this.points[1].Y + " " + this.points[1].X + "," + this.points[1].Y +"   "
+  + this.points[2].X + "," + this.points[2].Y + " " + this.points[1].X + "," + this.points[2].Y +"   "
+  + this.points[3].X + "," + this.points[3].Y + " " + this.points[0].X + "," + this.points[3].Y + "' " + "-"
+  + ' | convert - -flip - | convert - -crop ' + width + 'x' +  height + '+' + this.points[0].X + '+' + this.points[0].Y
+  + ' ' + this.imgdest;
+  console.log(this.script);
 };
 
-module.exports.prototype.fakeprocess = function (cb) {
-  exec('convert tmp/image.png -flip tmp/newimage.png ',cb);
+module.exports.prototype.fakeprocess = function (callback) {
+  exec('convert tmp/image.png -flip tmp/newimage.png ',callback);
 };
 
 module.exports.prototype.process = function (callback) {
